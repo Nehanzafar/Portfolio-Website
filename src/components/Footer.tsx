@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import { Typography } from "@mui/material";
 import Button from "@mui/material/Button";
 import { Link } from "react-router-dom";
-import Icon from "../components/Icons";
+import DynamicIcon from "../components/Icons";
 import constant from "../data/constant.json";
 import type { componentProps, navJson } from "../utils/portfolio-website";
 import ExpandableIconButtons from "./ExpandableIconButtons";
@@ -38,7 +38,7 @@ const SocialIconList = () => {
               href={value.href}
               state={[curOpenBtn, setCurOpenBtn]}
             >
-              <Icon name={value.icon} color="#fff" />
+              <DynamicIcon name={value.icon} color="#fff" />
             </ExpandableIconButtons>
           </li>
         );
@@ -92,23 +92,23 @@ const Footer = () => {
           }
         })}
       </ul>
-      <div className="bg-[#fff1dbFF] h-32 block flex-col justify-between w-full relative z-1">
+      <div className="bg-[#fff7e9] h-32 block flex-col justify-between w-full relative z-1">
         <SocialIconList />
-        <div className="absolute bottom-0 flex w-full justify-between">
-          <Typography variant="caption" className="inline-block">
+        <div className="absolute bottom-0 flex w-full justify-between items-center z-2">
+          <Typography variant="caption" className="inline-block mx-4 text-black">
             {date.getFullYear()} — {constant.footer.copyright}
           </Typography>
           <span>
             <a href={constant.footer.privacy.href}>
               <Typography
                 variant="caption"
-                className="inline-block md:mx-2 mx-1"
+                className="inline-block mx-4 text-black"
               >
                 {constant.footer.privacy.text}
               </Typography>
             </a>
             <a href={constant.footer.terms.href}>
-              <Typography variant="caption" className="inline md:mx-2 mx-1">
+              <Typography variant="caption" className="inline mx-4 text-black">
                 {constant.footer.terms.text}
               </Typography>
             </a>

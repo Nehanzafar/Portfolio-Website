@@ -23,4 +23,6 @@ dist-ssr
 *.sln
 *.sw?
 *.txt
+/.dist
+/.idea
 Portfolio\ Website.code-workspace

@@ -1,9 +1,6 @@
 @layer theme, base, mui, components, utilities;
 @import 'tailwindcss';
 
-@config "./tailwind.config.ts";
-
-
 
 @custom-variant dark (&:where(.dark, .dark *));
 
@@ -21,7 +18,16 @@
   * {
     font-family: Montserrat;
     box-sizing: border-box;
+  }
 
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-white
   }
 
   body {
@@ -29,6 +35,9 @@
   }
 }
 
-.lucide {
-  color: var(--color-accent-yellow);
+@layer components {
+  .lucide {
+    @apply text-accent-yellow;
+  }
+
 }

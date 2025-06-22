@@ -3,5 +3,18 @@
   "references": [
     { "path": "./tsconfig.app.json" },
     { "path": "./tsconfig.node.json" }
+  ],
+  "compilerOptions": {
+    "outDir": "./dist", // ✅ Should be dist or build
+    "rootDir": "./src", // ✅ Make sure it's not 'node_modules'
+    "noEmit": false
+  },
+
+  "exclude": [
+    "node_modules",
+    "dist",
+    "public/node_modules",
+    "**/*.test.ts",
+    "**/*.spec.ts"
   ]
 }

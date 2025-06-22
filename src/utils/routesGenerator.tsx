@@ -1,6 +1,5 @@
 import { type RouteObject } from "react-router";
 import ErrorElement from "../routes/ErrorElement";
-import constant from "../data/constant.json";
 import Root from "../routes/root";
 import type { navJson } from "./portfolio-website.d.ts";
 import Components from "../utils/staticImports.tsx";
@@ -36,15 +35,16 @@ function createRoutesFromJSON(
   }
 }
 
-const childrenRoutes = constant.nav.map((obj: navJson) => {
-  return createRoutesFromJSON(obj, Components);
-});
+export default function routesGenerator(navList: navJson[]) {
+  const childrenRoutes = navList.map((obj: navJson) => {
+    return createRoutesFromJSON(obj, Components);
+  });
 
-const routes: RouteObject = {
-  path: "/",
-  element: <Root />,
-  errorElement: <ErrorElement />,
-  children: childrenRoutes,
-};
-
-export default routes;
+  const routes: RouteObject = {
+    path: "/",
+    element: <Root />,
+    errorElement: <ErrorElement />,
+    children: childrenRoutes,
+  };
+  return routes;
+}

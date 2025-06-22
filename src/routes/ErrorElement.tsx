@@ -12,7 +12,7 @@ const ErrorElement = () => {
 
   return (
     <div className="flex flex-col justify-center items-center h-screen w-screen text-center">
-      <CircleAlert size={72} />
+      <CircleAlert size={72}/>
       <h1 className="text-3xl text-accent-yellow font-bold">
         Something went wrong!
       </h1>

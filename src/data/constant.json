@@ -18,5 +18,17 @@
     "copyright": "Nehan Zafar",
     "privacy": { "text": "Privacy Policy", "href": "#" },
     "terms": { "text": "Terms & Condition", "href": "#" }
+  },
+  "Home": {
+    "hero_section": {
+      "main_text": "\"Building bold digital experiences that speak for themselves.\"",
+      "sup_main_text": "Frontend Developer • UI Enthusiast • Creative Coder",
+      "btn_outlined": "Browse Portfolio",
+      "btn_contained": "Get in Touch"
+    },
+    "main_content": {
+      "main_text": "Hi, I’m Nehan Zafar — a web developer passionate about building clean, responsive, and engaging web experiences.",
+      "quoteText": ""
+    }
   }
 }

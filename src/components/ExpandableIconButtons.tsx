@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useCallback, useState } from "react";
 import IconButtons from "./IconButtons";
 import type { componentProps } from "../utils/portfolio-website";
 
@@ -20,15 +20,10 @@ const ExpandableIconButtons = ({
   const [open, setOpen] = useState(false);
   const [curOpen, setCurOpen] = state;
 
-  function handleClick() {
-    setOpen(!open);
+  const handleClick = useCallback(() => {
+    setOpen((o) => !o);
     setCurOpen(id);
-  }
-  React.useEffect(() => {
-    if (id !== curOpen) {
-      setOpen(false);
-    }
-  }, [curOpen, id]);
+  }, [id, setCurOpen]);
 
   return (
     <div className="flex justify-content">
@@ -38,7 +33,7 @@ const ExpandableIconButtons = ({
       <a
         href={href}
         className={`lg:hidden hidden
-          ${open ? "inline-block" : "hidden"}
+          ${open && curOpen === id ? "inline-block" : "hidden"}
            bg-gray-300 lg:peer-hover:inline-block h-10 py-2 px-7 rounded-r-full -translate-x-4`}
       >
         {text}

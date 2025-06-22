@@ -15,7 +15,6 @@ const obj = COMPONENTS.reduce(
     // .replace('.jsx', '');
     // @ts-expect-error Throwing a weird error that will be fixed later
     acc[name] = mod;
-    console.log(typeof acc);
     return acc;
   },
   {}

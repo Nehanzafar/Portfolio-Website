@@ -11,7 +11,6 @@ const Header = () => {
   const [navOpen, setNavOpen] = React.useState(false);
   GoToTop()
 
-
   function handleClick() {
     setNavOpen(!navOpen);
     if (navOpen) {
@@ -23,7 +22,7 @@ const Header = () => {
   }
 
   return (
-    <header className="flex flex-row justify-between items-center w-full h-24 md:p-6 p-2 backdrop-blur-md">
+    <header className="flex flex-row justify-between items-center w-full h-24 md:p-6 p-2 backdrop-blur-md sticky z-50">
       <Link to={"/"}>
         <h1 className="text-white text-2xl">
           <span>{constant.logoText.slice(0, 5)}</span>
@@ -56,12 +55,12 @@ const Header = () => {
             <X color="#fff" className="" />
           </IconButtons>
 
-          <ul className="absolute top-0 right-0 md:w-1/2 w-full h-screen bg-accent-yellow md:block flex flex-col justify-center items-center">
+          <ul className="absolute top-0 right-0 md:w-1/2 w-full h-screen bg-accent-yellow md:block flex flex-col items-center justify-start">
             {constant.nav.map((list: navJson) => {
               return (
                 <li
                   key={list.name}
-                  className="first:md:mt-24 p-5 m-5 hover:bg-dark-green md:w-2/3 w-56 text-center md:text-left hover:text-accent-yellow font-bold text-white text-xl rounded-lg flex md:justify-start md:items-center justify-center"
+                  className="first:mt-32 p-5 m-5 hover:bg-dark-green md:w-2/3 w-56 text-center md:text-left hover:text-accent-yellow font-bold text-white text-xl rounded-lg flex md:justify-start md:items-center justify-center"
                 >
                   <span className="w-2 h-12 bg-accent-yellow mr-10 hidden md:inline-block"></span>
                   {list.isIndex ? (

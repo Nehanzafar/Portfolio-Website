@@ -1,24 +1,20 @@
-import { lazy, Suspense } from "react";
-import type { LucideProps } from "lucide-react";
-import dynamicIconImports from "lucide-react/dynamicIconImports";
+// LazyIcon.tsx
+import React from 'react';
+import { iconMap } from '../utils/iconmap';
 
+type IconName = keyof typeof iconMap;
 
-const fallback = <div style={{ background: "#ddd", width: 24, height: 24 }} />;
-
-interface IconProps extends Omit<LucideProps, "ref"> {
-  name: keyof typeof dynamicIconImports;
+interface LazyIconProps extends React.SVGProps<SVGSVGElement> {
+  name: IconName;
 }
 
-const Icon = ({ name, ...props }: IconProps) => {
-  if (dynamicIconImports[name]) {
-    const LucideIcon = lazy(dynamicIconImports[name]);
-    return (
-      <Suspense fallback={fallback}>
-        <LucideIcon {...props} />
-      </Suspense>
-    );
-
-  }
+const DynamicIcon = ({ name, ...props }: LazyIconProps) => {
+  const IconComponent = iconMap[name as IconName]
+  return (
+    <React.Suspense fallback={<span />}>
+      <IconComponent {...props} />
+    </React.Suspense>
+  );
 };
 
-export default Icon;
+export default DynamicIcon;

@@ -4,7 +4,8 @@ import "./styles/index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { StyledEngineProvider } from "@mui/material/styles";
 import GlobalStyles from "@mui/material/GlobalStyles";
-import routes from "./utils/routesGenerator.tsx";
+import routesGenerator from "./utils/routesGenerator.tsx";
+import constant from "./data/constant.json";
 // import Home from "./routes/Home.tsx";
 // import About from "./routes/About.tsx";
 // import Root from "./routes/root.tsx";
@@ -29,10 +30,12 @@ const rootElement = document.getElementById("root");
 //   ],
 // };
 
+
+const routes = routesGenerator(constant.nav);
+
 const router = createBrowserRouter([routes], {
   basename: "/Portfolio-Website",
 });
-
 
 createRoot(rootElement!).render(
   <StrictMode>
