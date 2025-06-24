@@ -7,7 +7,7 @@ interface props extends componentProps {
 
 const H1 = ({ children, className }: props): React.ReactNode => {
   return (
-    <h1 className={`font-bold text-accent-yellow lg:text-6xl md:w-8/12 w-4/5 md:text-5xl text-2xl mt-2 ${className}`}>
+    <h1 className={`font-bold text-accent-yellow lg:text-6xl md:w-8/12 w-full md:text-5xl text-2xl mt-2 ${className}`}>
       {children}
     </h1>
   );

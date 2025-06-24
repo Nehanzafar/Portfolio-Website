@@ -28,7 +28,21 @@
     },
     "main_content": {
       "main_text": "Hi, I’m Nehan Zafar — a web developer passionate about building clean, responsive, and engaging web experiences.",
-      "quoteText": ""
-    }
+      "quoteText": "I'm passionate about crafting intuitive, visually engaging websites that blend design and development. I enjoy turning ideas into clean, responsive interfaces — combining creative design with solid, maintainable code to deliver smooth, user-focused experiences.",
+      "parallaxText": "Bold. Fluid. Thoughtful."
+    },
+    "testimonials": [
+      {
+        "heading": "A True Problem Solver",
+        "text": "Lorem ipsum veniam aliqua irure sit reprehenderit eiusmod. Ad magna consequat aliquip commodo in nisi dolore deserunt incididunt culpa. Adipiscing nostrud est labore quis ex consectetur non cupidatat et qui proident. Sed amet excepteur duis nulla anim tempor officia Lorem ipsum veniam aliqua irure sit reprehenderit eiusmod. Ad magna consequat aliquip commodo in nisi dolore deserunt incididunt culpa. Adipiscing nostrud est labore quis ex consectetur non cupidata",
+        "imageSrc": "",
+        "author": {
+          "name": "Name",
+          "role": "Role",
+          "company": "Company",
+          "imgSrc": ""
+        }
+      }
+    ]
   }
 }

@@ -53,7 +53,7 @@ const Footer = () => {
   return (
     <footer className="w-full ">
       <div className="w-full flex flex-col md:my-4 my-1 -z-10">
-        <ParallaxTextbg className="self-end">
+        <ParallaxTextbg className="self-end absolute right-0">
           {constant.footer.ContactText.toLocaleUpperCase()}
         </ParallaxTextbg>
         <h1 className="text-white md:text-8xl text-5xl font-bold self-center lg:-translate-x-20">
