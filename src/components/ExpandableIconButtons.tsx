@@ -1,11 +1,11 @@
 import { useCallback, useState } from "react";
-import IconButtons from "./IconButtons";
+import IconButtons from "./OnEveryPage/IconButtons";
 import type { componentProps } from "../utils/portfolio-website";
 
 interface props extends componentProps {
   text?: string;
   href?: string;
-  state: [number, (arg0: number) => number];
+  state: [number | undefined, (arg0: number | undefined) => void];
   id: number;
 }
 
@@ -27,7 +27,7 @@ const ExpandableIconButtons = ({
 
   return (
     <div className="flex justify-content">
-      <IconButtons className={`peer z-10  ${className}`} onClick={handleClick}>
+      <IconButtons className={`peer z-10 ${className}`} onClick={handleClick}>
         {children}
       </IconButtons>
       <a

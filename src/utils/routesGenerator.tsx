@@ -4,6 +4,7 @@ import Root from "../routes/root";
 import type { navJson } from "./portfolio-website.d.ts";
 import Components from "../utils/staticImports.tsx";
 import type { ReactNode } from "react";
+// import Home from "../routes/Home.tsx";
 
 interface componentObj {
   [name: string]: () => ReactNode;
@@ -48,3 +49,28 @@ export default function routesGenerator(navList: navJson[]) {
   };
   return routes;
 }
+
+//   const routes: RouteObject = {
+//     path: "/",
+//     element: <Root />,
+//     errorElement: <ErrorElement />,
+//     children: [
+//       {
+//         element: <Home/>,
+//         index: true
+//       },
+//       {
+//         element: <About/>,
+//         path: "/about"
+//       },
+//       {
+//         element: <Contact/>,
+//         path: "/contact"
+//       },
+//       {
+//         element: <Projects/>,
+//         path: "/projects"
+//       }
+//     ],
+//   };
+// export default routes

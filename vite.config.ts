@@ -8,14 +8,5 @@ export default defineConfig({
   build: {
     outDir: "dist", // ✅ makes sure output is in 'dist'
     emptyOutDir: true,
-    rollupOptions: {
-      treeshake: true,
-      external: [
-        "./node-modules/*", // ⛔ local file to exclude
-      ],
-      output: {
-        manualChunks: undefined,
-      }
-    }, 
   },
 });

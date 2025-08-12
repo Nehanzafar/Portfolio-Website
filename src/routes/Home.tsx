@@ -1,42 +1,51 @@
 import constant from "../data/constant.json";
 import Button from "@mui/material/Button";
-import EOS from "../assets/svgs/End Of section.svg";
-import Quote from "../components/Qoute";
+import EOS from "../assets/svgs/End Of sectionpw.svg";
+import Quote from "../components/OnEveryPage/Qoute";
 import H1 from "../components/Heading1";
 import ParallaxTextbg from "../components/ParallaxTextbg";
-import Testimonial from "../components/Testimonial";
-import type { TestimonialData } from "../components/Testimonial";
+import Testimonial from "../components/Home/Testimonial";
+import type { TestimonialData } from "../components/Home/Testimonial";
+import type { TechStackData } from "../components/Home/TechStackDIsplay";
+import { useState } from "react";
+import useResize from "../hooks/useResize";
+import ParallaxTextScroll from "../components/Home/ParallaxTextBar";
+import Section from "../components/OnEveryPage/Section";
+import TechStackDisplay from "../components/Home/TechStackDIsplay";
+import FAQ from "../components/OnEveryPage/FAQ";
+import Paragraph from "../components/OnEveryPage/Paragragh";
 
 const hero = constant.Home.hero_section;
 const main = constant.Home.main_content;
 const TestimonialsJson = constant.Home.testimonials;
+const TechStackJson = constant.Home.TechStackData;
 
 const Home = () => {
   return (
-    <div className="lg:mx-30 md:mx-10 mx-8">
-      <section
+    <div className="">
+      <Section
         aria-label="hero-section"
-        className="lg:h-fit flex flex-col items-center text-center"
+        className="lg:h-screen md:h-[84vh] h-[70vh] justify-center flex flex-col items-center lg:justify-start text-center md:mt-0 mt-10"
         // style={{
         //   backgroundImage: `
         //   url('src/assets/imgs/background-hero.jpg')
         // `,
         // }}
       >
-        <p className="font-light lg:text-lg md:text-md text-sm mt-16">
+        <p className="font-light lg:text-lg text-md mt-16 ">
           {hero.sup_main_text}
         </p>
-        <H1>{hero.main_text}</H1>
+        <H1 className="md:w-8/12 w-full">{hero.main_text}</H1>
         <div className="flex md:justify-between justify-center md:w-sm w-full mt-8 md:mx-0">
           <Button
             variant="outlined"
-            className="border-accent-pink text-white font-normal md:text-md text-xs md:py-3 py-2 rounded-lg w-46 mx-3"
+            className="border-accent-pink text-white font-normal md:text-md text-xs rounded-lg mx-1 w-40 md:py-3"
           >
             {hero.btn_outlined}
           </Button>
           <Button
             variant="contained"
-            className="bg-accent-yellow text-white font-normal md:text-md text-xs md:py-3 py-3 rounded-lg w-44 mx-3"
+            className="bg-accent-yellow text-white font-normal md:text-md text-xs rounded-lg mx-1 w-40 md:py-3"
           >
             {hero.btn_contained}
           </Button>
@@ -44,37 +53,37 @@ const Home = () => {
         <img
           src={EOS}
           alt=""
-          className="lg:mt-56 mt-36 justify-self-end self-center"
+          className="lg:mt-56 mt-36 justify-self-end"
           width={300}
         />
-      </section>
-      <section aria-label="main-content" className="mt-24">
-        <h1 className="text-accent-yellow font-bold md:text-4xl text-2xl w-full text-center md:text-left">
+      </Section>
+      <Section aria-label="main-content">
+        <H1 className="text-accent-yellow font-extrabold md:text-4xl text-xl text-center md:text-left">
           {main.main_text}
-        </h1>
-        <div className="flex justify-between w-full my-10">
-          <Quote className="ml-5 mt-10 md:w-2/5">{main.quoteText}</Quote>
-          <span
-            className={`rounded-full md:inline-block hidden w-xs h-80 bg-[url(../assets/imgs/wireframe_of_an_app.jpg)] bg-cover shadow-dark-green shadow-[inset_0_0px_24px_rgba(4,42,43,0.6)]`}
-          >
-            {/* <img
-            src={wireframeImg}
-            height={320}
-            className="rounded-full"
-            alt=""
-          /> */}
-          </span>
-        </div>
+        </H1>
+        <Paragraph className="mr-20 my-5">{main.sub_text}</Paragraph>
 
         <ParallaxTextbg className="absolute right-0">
           {main.parallaxText}
         </ParallaxTextbg>
-      </section>
-      <section aria-label="Testimonials" className="mt-24">
-        {/* {TestimonialsJson.map((obj: TestimonialData) => {
-          return <Testimonial data={obj} />;
-        })} */}
-      </section>
+      </Section>
+      <Section aria-label="Testimonials" className="mt-24">
+        {TestimonialsJson.map((obj: TestimonialData, i) => {
+          return <Testimonial key={i} data={obj} />;
+        })}
+        <ParallaxTextbg className="">Testimonial</ParallaxTextbg>
+      </Section>
+      <Section className="mx-0" style={{ margin: "0" }}>
+        <ParallaxTextScroll />
+      </Section>
+      <Section>
+        {TechStackJson.map((obj: TechStackData, i) => {
+          return <TechStackDisplay key={i} data={obj} />;
+        })}
+      </Section>
+      <Section>
+        <FAQ />
+      </Section>
       <h1>Home Page</h1>
     </div>
   );
