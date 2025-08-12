@@ -1,6 +1,6 @@
 import constant from "../data/constant.json";
 import Button from "@mui/material/Button";
-import EOS from "../assets/svgs/End Of sectionpw.svg";
+import EOS from "../assets/svgs/End Of section.svg";
 import Quote from "../components/Qoute";
 import H1 from "../components/Heading1";
 import ParallaxTextbg from "../components/ParallaxTextbg";
