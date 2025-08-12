@@ -28,13 +28,14 @@
     },
     "main_content": {
       "main_text": "Hi, I’m Nehan Zafar — a web developer passionate about building clean, responsive, and engaging web experiences.",
-      "quoteText": "I'm passionate about crafting intuitive, visually engaging websites that blend design and development. I enjoy turning ideas into clean, responsive interfaces — combining creative design with solid, maintainable code to deliver smooth, user-focused experiences.",
+      "sub_text": "I am a passionate front-end developer with a strong focus on creating clean, responsive, and user-friendly web interfaces. With a solid foundation in HTML, CSS, and JavaScript, I build modern web applications that are both visually appealing and functionally robust. I have experience working with frameworks like React, and I enjoy turning design concepts into interactive, accessible experiences. I'm constantly learning and keeping up with the latest trends in the web industry to ensure that the solutions I build are efficient, scalable, and aligned with current best practices.",
+      "mobileQuoteText": "I'm passionate about crafting intuitive, visually engaging websites that blend design and development. I enjoy turning ideas into clean, responsive interfaces — combining creative design with solid, maintainable code to deliver smooth, user-focused experiences.",
       "parallaxText": "Bold. Fluid. Thoughtful."
     },
     "testimonials": [
       {
         "heading": "A True Problem Solver",
-        "text": "Lorem ipsum veniam aliqua irure sit reprehenderit eiusmod. Ad magna consequat aliquip commodo in nisi dolore deserunt incididunt culpa. Adipiscing nostrud est labore quis ex consectetur non cupidatat et qui proident. Sed amet excepteur duis nulla anim tempor officia Lorem ipsum veniam aliqua irure sit reprehenderit eiusmod. Ad magna consequat aliquip commodo in nisi dolore deserunt incididunt culpa. Adipiscing nostrud est labore quis ex consectetur non cupidata",
+        "text": "Lorem ipsum veniam aliqua irure. amet excepteur duis nulla anim tempor officia Lorem ipsum veniam aliqua irure sit reprehenderit eiusmod. Ad magna consequat aliquip commodo in nisi dolore deserunt incididunt culpa. Adipiscing nostrud est labore quis ex consectetur non cupidata",
         "imageSrc": "",
         "author": {
           "name": "Name",
@@ -43,6 +44,45 @@
           "imgSrc": ""
         }
       }
+    ],
+    "TechStackData": [
+      {
+        "heading": "Logitech",
+        "text": "Lorem ipsum veniam aliqua irure. amet excepteur duis nulla anim tempor officia Lorem ipsum veniam aliqua irure sit reprehenderit eiusmod. Ad magna consequat aliquip commodo in nisi dolore deserunt incididunt culpa. Adipiscing nostrud est labore quis ex consectetur non cupidata",
+        "imageSrc": "",
+        "TechStackInfo": ""
+      }
     ]
-  }
+  },
+  "parallaxScrollText": {
+    "top": [
+      "Accessible Interfaces",
+      "Web Animation",
+      "Responsive Design",
+      "UI/UX Focused",
+      "Creative Code"
+    ],
+    "middle": [
+      "“Design with intent.”",
+      "“It’s not just a website — it’s an experience.”"
+    ],
+    "bottom": ["WEB", "CREATE", "DESIGN", "CODE"]
+  },
+  "FAQ": [
+    {
+      "Heading": "Project Timeline",
+      "Question": "How long will it take to build my website?",
+      "Answer": "Think of a website like building a house — the more rooms (features) you want, the longer it takes! A simple site can be ready in a couple of weeks, while more complex ones can take a few months. I’ll keep you updated every step of the way so there are no surprises."
+    },
+    {
+      "Heading": "Editing Your Own Website",
+      "Question": "Can I update the website myself after it’s done?",
+      "Answer": "absolutely! I’ll set it up so you can easily change text, images, and even add new pages without touching any scary code. And if you ever get stuck, I’m just a message away."
+    },
+    {
+      "Heading": "Mobile-Friendly Design",
+      "Question": "Will my website look good on phones and tablets?",
+      "Answer": "Yes — I design everything to be ‘mobile-friendly’ from the start. That means your site will look just as sharp on a phone as it does on a big desktop screen. No squinting or awkward zooming required!"
+    }
+  ]
 }

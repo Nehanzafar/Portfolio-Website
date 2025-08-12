@@ -1,18 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import constant from "../data/constant.json";
+import constant from "../../data/constant.json";
 import { Menu, X } from "lucide-react";
-import IconButtons from "../components/IconButtons";
+import IconButtons from "./IconButtons";
 import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
-import type { navJson } from "../utils/portfolio-website";
-import GoToTop from "../utils/GoToTop";
+import type { navJson } from "../../utils/portfolio-website";
+import GoToTop from "../../utils/GoToTop";
 
 const Header = () => {
   const [navOpen, setNavOpen] = React.useState(false);
-  GoToTop()
+  GoToTop();
 
   function handleClick() {
-    setNavOpen(!navOpen);
+    console.log(navOpen)
+    setNavOpen(c => !c);
     if (navOpen) {
       enableBodyScroll(document.body);
     } else {
@@ -64,8 +65,11 @@ const Header = () => {
                 >
                   <span className="w-2 h-12 bg-accent-yellow mr-10 hidden md:inline-block"></span>
                   {list.isIndex ? (
-                    <Link to={"/"} onClick={handleClick} className={"self-center"}>
-
+                    <Link
+                      to={"/"}
+                      onClick={handleClick}
+                      className={"self-center"}
+                    >
                       {list.name}
                     </Link>
                   ) : (

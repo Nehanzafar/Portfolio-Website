@@ -15,9 +15,15 @@
 }
 
 @layer base {
+
   * {
     font-family: Montserrat;
     box-sizing: border-box;
+
+  }
+
+  html {
+    @apply snap-y snap-mandatory h-auto
   }
 
   p,

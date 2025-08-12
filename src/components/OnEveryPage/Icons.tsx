@@ -1,6 +1,6 @@
 // LazyIcon.tsx
-import React from 'react';
-import { iconMap } from '../utils/iconmap';
+import React from "react";
+import { iconMap } from "../../utils/iconmap";
 
 type IconName = keyof typeof iconMap;
 
@@ -9,7 +9,7 @@ interface LazyIconProps extends React.SVGProps<SVGSVGElement> {
 }
 
 const DynamicIcon = ({ name, ...props }: LazyIconProps) => {
-  const IconComponent = iconMap[name as IconName]
+  const IconComponent = iconMap[name as IconName];
   return (
     <React.Suspense fallback={<span />}>
       <IconComponent {...props} />
