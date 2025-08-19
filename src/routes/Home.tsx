@@ -1,6 +1,6 @@
 import constant from "../data/constant.json";
 import Button from "@mui/material/Button";
-import EOS from "../assets/svgs/End Of sectionpw.svg";
+import EOS from "../assets/svgs/End Of section.svg";
 import Quote from "../components/OnEveryPage/Qoute";
 import H1 from "../components/Heading1";
 import ParallaxTextbg from "../components/ParallaxTextbg";
@@ -25,7 +25,7 @@ const Home = () => {
     <div className="">
       <Section
         aria-label="hero-section"
-        className="lg:h-screen md:h-[84vh] h-[70vh] justify-center flex flex-col items-center lg:justify-start text-center md:mt-0 mt-10"
+        className="lg:h-screen md:h-[90vh] h-[70vh] justify-center flex flex-col items-center lg:justify-start text-center md:mt-0 mt-10"
         // style={{
         //   backgroundImage: `
         //   url('src/assets/imgs/background-hero.jpg')
@@ -58,10 +58,15 @@ const Home = () => {
         />
       </Section>
       <Section aria-label="main-content">
-        <H1 className="text-accent-yellow font-extrabold md:text-4xl text-xl text-center md:text-left">
+        <H1 className="text-accent-yellow font-extrabold md:text-4xl text-xl text-center md:text-center">
           {main.main_text}
         </H1>
-        <Paragraph className="mr-20 my-5">{main.sub_text}</Paragraph>
+        <Paragraph className="my-5 text-center hidden md:block">
+          {main.sub_text}
+        </Paragraph>
+        <Paragraph className="my-5 text-center md:hidden block">
+          {main.mobile_sub_text}
+        </Paragraph>
 
         <ParallaxTextbg className="absolute right-0">
           {main.parallaxText}
@@ -81,10 +86,9 @@ const Home = () => {
           return <TechStackDisplay key={i} data={obj} />;
         })}
       </Section>
-      <Section>
+      <Section className="flex justify-around">
         <FAQ />
       </Section>
-      <h1>Home Page</h1>
     </div>
   );
 };

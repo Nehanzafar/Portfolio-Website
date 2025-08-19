@@ -29,7 +29,7 @@
     "main_content": {
       "main_text": "Hi, I’m Nehan Zafar — a web developer passionate about building clean, responsive, and engaging web experiences.",
       "sub_text": "I am a passionate front-end developer with a strong focus on creating clean, responsive, and user-friendly web interfaces. With a solid foundation in HTML, CSS, and JavaScript, I build modern web applications that are both visually appealing and functionally robust. I have experience working with frameworks like React, and I enjoy turning design concepts into interactive, accessible experiences. I'm constantly learning and keeping up with the latest trends in the web industry to ensure that the solutions I build are efficient, scalable, and aligned with current best practices.",
-      "mobileQuoteText": "I'm passionate about crafting intuitive, visually engaging websites that blend design and development. I enjoy turning ideas into clean, responsive interfaces — combining creative design with solid, maintainable code to deliver smooth, user-focused experiences.",
+      "mobile_sub_text": "I'm passionate about crafting intuitive, visually engaging websites that blend design and development. I enjoy turning ideas into clean, responsive interfaces — combining creative design with solid, maintainable code to deliver smooth, user-focused experiences.",
       "parallaxText": "Bold. Fluid. Thoughtful."
     },
     "testimonials": [
@@ -84,5 +84,9 @@
       "Question": "Will my website look good on phones and tablets?",
       "Answer": "Yes — I design everything to be ‘mobile-friendly’ from the start. That means your site will look just as sharp on a phone as it does on a big desktop screen. No squinting or awkward zooming required!"
     }
-  ]
+  ],
+  "About": {
+    "Main_heading": "About me",
+    "sub_text": "Hey, I’m Nehan Zafar — I design and build striking, high-impact websites that turn heads and convert clicks. My mission? To help bold brands and businesses grow through design that speaks and development that delivers."
+  }
 }

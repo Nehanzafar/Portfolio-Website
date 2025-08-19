@@ -53,10 +53,10 @@ const Footer = () => {
   return (
     <footer className="w-full ">
       <div className="w-full flex flex-col md:my-4 my-1 -z-10">
-        <ParallaxTextbg className="self-end translate-x-">
+        <ParallaxTextbg className="self-end">
           {constant.footer.ContactText.toLocaleUpperCase()}
         </ParallaxTextbg>
-        <h1 className="text-white md:text-8xl text-5xl font-bold self-center lg:-translate-x-20">
+        <h1 className="text-white md:text-8xl text-4xl font-bold self-center lg:-translate-x-20">
           {constant.footer.ContactText.toLocaleUpperCase()}
         </h1>
         <Button

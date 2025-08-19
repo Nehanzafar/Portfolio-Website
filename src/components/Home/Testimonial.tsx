@@ -29,9 +29,9 @@ const Testimonial = (props: props): React.ReactNode => {
   return (
     <div
       aria-label="Testimonial-card"
-      className="flex md:flex-row flex-col justify-between h-[90vh] bg-accent-yellow rounded-2xl md:py-5 lg:px-4 px-2 relative md:mx-auto"
+      className="flex lg:flex-row flex-col justify-between lg:h-[90vh] lg:mx-auto border-2 border-accent-yellow rounded-2xl md:py-5 lg:px-4 px-2 relative md:mx-auto"
     >
-      <div className="flex flex-col justify-between md:w-1/2">
+      <div className="flex flex-col  justify-between">
         <div className="md:p-1 p-3 my-5">
           <FaQuoteLeft color="white" fill="white" size={76} className="" />
           <h1 className="font-extrabold md:text-4xl text-2xl">

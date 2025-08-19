@@ -25,21 +25,21 @@ const TechStackDisplay = (props: props) => {
   return (
     <div
       aria-label="Tech-stack-card"
-      className="flex lg:flex-row flex-col justify-between border border-accent-pink bg-accent-yellow h-[90vh] rounded-2xl md:py-5 lg:px-4 px-2 relative md:mx-auto"
+      className="flex lg:flex-row flex-col-reverse justify-between border border-accent-pink lg:h-[90vh] rounded-2xl md:py-5 lg:px-4 px-2 relative md:mx-auto"
     >
-      <div className="flex flex-col justify-start flex-grow-2 mr-4">
-        <TSContentDisplay></TSContentDisplay>
-        <H1 className="text-white tracking-tight my-4" style={{ fontSize: "10rem" }}>
+      <div className="flex flex-col justify-start flex-grow-2 lg:mr-4 lg:mx-1 md:items-start items-center">
+        <TSContentDisplay className="mt-10"></TSContentDisplay>
+        <h1 className="md:text-[10rem] sm:text-8xl text-6xl font-bold text-white tracking-tight lg:my-4 my-2">
           {props.data.heading}
-        </H1>
-        <blockquote className="md:text-sm text-sm text-white">
+        </h1>
+        <blockquote className="md:text-sm text-sm text-white ml-2 my-3 md:text-left text-center">
           {props.data.text}
         </blockquote>
       </div>
 
       <img
         src={props.data.imageSrc === "" ? Img : props.data.imageSrc}
-        className="rounded-2xl md:m-0 m-2 grow-0"
+        className="rounded-2xl md:m-0 m-2 grow-0 order-1"
         alt=""
       />
     </div>
@@ -48,7 +48,7 @@ const TechStackDisplay = (props: props) => {
 
 const TSContentDisplay = (props: componentProps) => {
   return (
-    <div className="flex items-center justify-center rounded-full border border-accent-pink px-7 py-3 w-60 text-accent-pink text-center font-semibold mb-4">
+    <div className={`flex items-center justify-center rounded-full border border-accent-pink px-7 py-3 w-60 text-accent-pink text-center font-semibold mb-4 md:mx-1 ${props.className}`}>
       <FaCircle className="text-lg" />
       <p className="ml-3">
         {props.children === undefined ? "Tech Stack Info" : props.children}

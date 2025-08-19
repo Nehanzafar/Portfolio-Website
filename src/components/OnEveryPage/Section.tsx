@@ -11,7 +11,7 @@ interface props extends componentProps {
 const Section = (props: props) => {
   return (
     <div
-      className={`mx-6 my-40 snap-start ${props.className}`}
+      className={`md:mx-6 mx-2 my-40 snap-start ${props.className}`}
       style={props.style}
     >
       {props.children}
